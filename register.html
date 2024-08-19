@@ -5,37 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button:hover {
+            background-color: rgb(184, 169, 240);
+        }
+
+        a:link {
+            color: blue;
+        }
+
+        a:hover {
+            color: aqua;
+        }
+
+        a:visited {
+            color: chocolate;
+        }
+    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Antique+Soft&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="register.css">
 </head>
 
 <body>
     <header>
         <div class="title">
-            <h1 class="name">Website</h1>
-            <img src="" alt="タイトル">
+            <h1 class="name">個人ブログ</h1>
         </div>
     </header>
     <main>
+        <h2>ユーザー登録</h2>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
         <section class="register">
-            <h2>Register</h2>
             <form class="register-form" method="post" action="#">
-                <div class="control-group">
-                    <label class="register-field-icon" for="login-name">Name</label>
+                <div class="control-group" id="username">
+                    <label class="register-field-icon" for="login-name">UserName</label>
                     <input name="register_name" type="text" class="login-field" value="" placeholder="username" id="login-name">
                 </div>
                 <div class="control-group">
                     <label class="register-field-icon" for="login-email">Email</label>
-                    <input name="register_password" type="text" class="login-field" value="" placeholder="email" id="login-email">
+                    <input name="register_email" type="text" class="login-field" value="" placeholder="email" id="login-email">
                 </div>
                 <div class="control-group">
                     <label class="register-field-icon" for="login-pass">Password</label>
-                    <input name="registerBTN" type="password" class="login-field" value="" placeholder="password" id="login-pass">
+                    <input name="register_password" type="password" class="login-field" value="" placeholder="password" id="login-pass">
                 </div>
                 <div class="control-group control-position">
-                    <button class="btn">Register</button>
+                    <button class="btn">登録</button>
                 </div>
                 <div class="control-group link control-position">
                     <a href="login.html" class="register-link">ログインがこちら</a>
@@ -45,7 +76,24 @@
 
     </main>
     <footer>
-        <p id="copyright"><small>&copy;2024 BaoZhenya Personal Blog</small></p>
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+        <div class="content flex">
+            <p><small>&copy;2024 BaoZhenya Personal Blog</small></p>
+        </div>
     </footer>
 
 </body>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="blog_style.css">
+</head>
+<body>
+        <header>
+            <nav class="pc">
+                <div class="pc-inner">
+                    <div class="pc-logo">
+                        <a href=""><img src="/images/logo.png" alt=""></a>
+                    </div>
+                    <h1>Fini's Garden</h1>
+                    <ul class="pc-list">
+                        <li class="pc-list__item"></li>
+                        <li class="pc-list__item"><a href="">Home</a></li>
+                        <li class="pc-list__item"><a href="">ブログ登録</a></li>
+                        <li class="pc-list__item"><a href="">削除リスト</a></li>
+                        <li class="pc-list__item"><a href="">ログアウト</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="main-inner">
+                <section class="register-section">
+                    <h2>ブログ登録</h2>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="register-section-details">
+                            <div class="register-section-details_flex">
+                                <div>タイトル</div>
+                                <input type="text" name="productName" value="" id="blog_title">
+                            </div>
+                            <div class="register-section-details_flex">
+                                <div>カテゴリー</div>
+                                <input type="text" name="productName" value="" id="category">
+                            </div>
+                            <div class="register-section-details_flex">
+                                <div>画像</div>
+                                <input type="file" name="productImage">
+                            </div>
+                            <div class="register-section-details_flex">
+                                <div>詳細</div>
+                                <textarea name="productDescription" placeholder="ブログ本文"></textarea>
+                            </div>
+    
+                        </div>
+                        <div class="register-section-details_flex">
+                            <button class="register">登録</button>
+                            <button class="back-btn" onclick="history.back();" type="button">戻る</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
+            <div class="content flex">
+                <p><small>&copy;2024 BaoZhenya Personal Blog</small></p>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="./js/common.js"></script>
+</body>
+</html>
