@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブログ編集</title>
+    <title>ブログ一覧</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="edit_style.css">
+    <link rel="stylesheet" href="list_style.css">
 </head>
 
 <body>
@@ -86,42 +86,26 @@
             </nav>
         </header>
         <main>
-            <div class="main-inner">
-                <section class="register-section">
-                    <h2>記事編集</h2>
-                    <form action="" method="post" enctype="multipart/form-data">
-                        <div class="blog_form">
-                            <div class="blog_form_flex">
-                                <div class="moji">タイトル</div>
-                                <input type="text" name="productName" value="" id="blog_title">
-                            </div>
-                            <div class="blog_form_flex">
-                                <div class="moji">カテゴリー</div>
-                                <input type="text" name="productName" value="" id="category">
-                            </div>
-                            <div class="blog_form_flex">
-                                <div class="moji">画像</div>
-                                <input type="file" name="productImage">
-                            </div>
-                            <div class="blog_form_flex">
-                                <div class="moji">本文</div>
-                                <textarea name="productDescription" placeholder="こちらに文章を書いてください"></textarea>
-                            </div>
+            <article>
+                <img class="holy" src="img/title.png" alt="title">
+                <h2>ブログ一覧</h2>
+                <ul class="products">
+                    <li>
+                        <a href="">
+                            <img src="" alt="">
+                            <p></p><br>
+                            <p></p>
+                        </a>
+                    </li>
 
-                        </div>
-                        <div class="register-section-details_flex">
-                            <button class="register">更新</button>
-                            <button class="back-btn" onclick="history.back();" type="button">戻る</button>
-                        </div>
-                    </form>
-                    <form th:action="@{/product/delete}" method="post">
-                        <div class="register-section-details_flex">
-                            <input type="hidden" name="productId" value="">
-                            <button class="delete">削除</button>
-                        </div>
-                    </form>
+                </ul>
+                <section class="register-item">
+                    <div class="all-view-register__button">
+                        <a href="" class="btn btn--orange btn--radius">記事を書く</a>
+                    </div>
                 </section>
-            </div>
+            </article>
+
         </main>
     </div>
     <footer>

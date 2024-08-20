@@ -1,0 +1,407 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+header{
+    width: 20%;
+    padding: 10px;
+    background-color: #ffde2096;
+}
+
+h1{
+    margin-left: 10px;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.circles{
+    position:absolute;
+    padding: 10px;
+    top: 0;
+    left: 0;
+    width: 19.8%;
+    height: 960px;
+    overflow: hidden;
+  }
+  
+  .circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(116, 57, 57, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+  }
+  
+  .circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+  }
+  
+  
+  .circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+  }
+  
+  .circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+  }
+  
+  .circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+  }
+  
+  .circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+  }
+  
+  .circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+  }
+  
+  .circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+  }
+  
+  .circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+  }
+  
+  .circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+  }
+  
+  .circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+  }
+  
+  @keyframes animate {
+  
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+  
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+  
+  }
+
+main{
+    margin: 0 auto;
+    width: 80%;
+    padding: 10px;
+    background-color: aliceblue;
+}
+ul
+{
+margin:0px;
+padding:0px;
+list-style-type:none;
+-webkit-backface-visibility: hidden; backface-visibility: hidden;  
+}
+.var_nav
+{
+position:relative;
+background:#ffc880c2;
+width:100%;
+height:70px;
+margin-bottom:5px;
+}
+.link_bg
+{
+ width:70px;
+ height:70px;
+ position:absolute;
+ background:#ffab3dc2;
+ color:#fff;
+ z-index:2;
+}
+.link_bg i
+{
+ position:relative;
+}
+.link_title
+{
+position:absolute;
+width:100%;
+z-index:3;
+color:#fff;
+}
+.link_title:hover .icon
+{
+-webkit-transform:rotate(360deg);
+-moz-transform:rotate(360deg);
+-o-transform:rotate(360deg);
+-ms-transform:rotate(360deg);
+transform:rotate(360deg);  
+}
+.var_nav:hover .link_bg
+{
+width:100%;
+background:#ffab3dc2;
+-webkit-transition: all 0.3s ease-in-out;
+-moz-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+-ms-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;  
+}
+.var_nav:hover a
+{
+font-weight:bold;
+-webkit-transition:all .5s ease-in-out;
+-moz-transition:all .5s ease-in-out; 
+-o-transition:all .5s ease-in-out; 
+-ms-transition:all .5s ease-in-out;
+ transition:all .5s ease-in-out;  
+}
+.icon
+{
+position:relative;
+width:70px;
+height:70px;
+text-align:center;
+color:#fff;
+-webkit-transition:all .5s ease-in-out;
+-moz-transition:all .5s ease-in-out; 
+-o-transition:all .5s ease-in-out; 
+-ms-transition:all .5s ease-in-out;   
+float:left;
+transition:all .5s ease-in-out;   
+float:left;  
+}
+.icon i{top:22px;position:relative;}
+a{
+display:block;
+position:absolute;
+float:left;
+font-family:arial;
+color:#fff;
+text-decoration:none;
+width:100%;
+height:70px;
+text-align:center;
+}
+span
+{
+margin-top:25px;
+display:block;
+}
+
+
+
+/*----------------------------------------------------------------
+ブログ一覧画面
+--------------------------------------------------------------------*/
+article {
+    width: 90%;
+    margin: 0 auto;
+}
+
+article h2 {
+    color: #594A4E;
+    font-family: Kiwi Maru;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+/*----------ブログ登録ボタン--------------*/
+.register-item{
+    text-align: center;
+    padding-top: 3rem;
+}
+/*----------------登録ボタン---------------------*/
+.btn--orange {
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    font-size: 20px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    background: linear-gradient(to top, #d49d3e, #f59e0b);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border-radius: 9999px;
+    border: 0;
+
+}
+
+.btn--orange:hover{
+    background-color: #ffefcc;
+    color: black;
+    transform: translateY(3px);
+    text-decoration: none;
+    box-shadow: 0 2px 0 #aaaaaa;
+}
+
+/*----------ブログ一覧--------------*/
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.products li {
+    width: 33%;
+    margin: 0.5rem;
+    border: 1px solid #594A4E;
+}
+
+.products li a img {
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.products li a p {
+    text-align: center;
+    color: #594A4E;
+    font-weight: bold;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+}
+/*---------------------------------------------------------------------------
+ブログ詳細
+----------------------------------------------------------------------------*/
+.product-details {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.product-details img {
+    width: 60%;
+    border: 1px solid #594A4E;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.product-details-message {
+    margin: 1rem auto;
+    width: 90%;
+}
+
+.product-details-message p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.product-details-purchasBtn {
+    width: 90%;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.product-details-purchasBtn button {
+    background-color: #EC6015;
+    border-radius: 1.2rem;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+}
+
+/*----------------ブログ一覧---------------------*/
+.products-list {
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.products-list h2 {
+    color: #594A4E;
+    font-family: Kiwi Maru;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.products-table {
+    width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+    border-top: 1px solid #594A4E;
+}
+.products-table tr{
+    border: 1px solid #594A4E;
+}
+.products-table th,.products-table td{
+    border: 1px solid #594A4E;
+    vertical-align:middle;
+    padding:1rem 0.5rem;
+}
+.products-table td button{
+    background-color: #EC6015;
+    border:1px solid #594A4E;
+    color: #fff;
+    margin-left: 0.2rem;
+}
+
+.products-table img{
+    width:30%;
+}
+.products-table input {
+    width: 2rem;
+}
+
+/*--------------フッター------------*/
+footer {
+    width: 100%;
+    margin: 0 auto;
+    height: 63px;
+}
+
+footer div {
+    text-align: center;
+    background-color: #ffde2096;
+    padding: 10px;
+    height: 63px;
+}
+
