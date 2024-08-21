@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button:hover {
+            background-color: rgb(28, 231, 221);
+        }
+
+        a:link {
+            color: blue;
+        }
+
+        a:hover {
+            color: aqua;
+        }
+
+        a:visited {
+            color: chocolate;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Zen+Antique+Soft&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+
+<body>
+    <!-- <div class="container"> --> 
+        <header>
+            <h1 class="name">個人ブログ</h1>
+        </header>
+        <main>
+            <h2>ログイン</h2>
+            <div class="area">
+                <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <section class="form-contents">
+
+                <form class="login-form" method="post" th:action="@{/account/login/process}">
+
+                    <div class="control-group" id="userEmail">
+                        <label class="login-field-icon" for="accountEmail">UserEmail</label>
+                        <input name="accountEmail" type="text" class="login-field" placeholder="UserEmail"
+                            id="accountEmail">
+                    </div>
+                    <div class="control-group">
+                        <label class="login-field-icon" for="password">Password</label>
+                        <input name="password" type="password" class="login-field" placeholder="password"
+                            id="password">
+                    </div>
+                    <div class="control-group control-position">
+                        <button class="btn">ログイン</button>
+                    </div>
+                    <div class="control-group control-position">
+                        <a class="login-link" th:href="@{/account/register}">ユーザー登録</a>
+                    </div>
+                </form>
+
+            </section>
+
+        </main>
+        <footer>
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                    </g>
+                </svg>
+            </div>
+            <div class="content flex">
+                <p><small>&copy;2024 BaoZhenya Personal Blog</small></p>
+            </div>
+        </footer>
+    <!-- </div> -->
+
+</body>
+
+</html>
