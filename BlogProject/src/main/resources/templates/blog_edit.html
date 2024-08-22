@@ -12,7 +12,7 @@
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="edit_style.css">
+    <link rel="stylesheet" th:href="@{/css/edit_style.css}">
 </head>
 
 <body>
@@ -33,7 +33,7 @@
                 </ul>
             </div>
             <div class="pc-logo">
-                <h1>Fini's Garden</h1>
+                <h1 th:text="${accountName}"></h1>
             </div>
             <nav class="pc">
                 <div class="pc-inner">
@@ -47,7 +47,7 @@
                                     home
                                 </i>
                             </div>
-                            <a href="#"><span>Home</span></a>
+                            <a th:href="@{/blog/list}"><span>Home</span></a>
                         </div>
                     </li>
                     <li class="var_nav">
@@ -58,7 +58,7 @@
                                     app_registration
                                 </i>
                             </div>
-                            <a href="#"><span>新規記事追加</span></a>
+                            <a th:href="@{/blog/register}"><span>新規記事追加</span></a>
                         </div>
                     </li>
                     <li class="var_nav">
@@ -79,7 +79,7 @@
                                     logout
                                 </i>
                             </div>
-                            <a href="login.html"><span>ログアウト</span></a>
+                            <a th:href="@{/account/logout}"><span>ログアウト</span></a>
                         </div>
                     </li>
                 </ul>
@@ -89,34 +89,35 @@
             <div class="main-inner">
                 <section class="register-section">
                     <h2>記事編集</h2>
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form th:action="@{/blog/edit/process}" method="post" enctype="multipart/form-data">
                         <div class="blog_form">
                             <div class="blog_form_flex">
                                 <div class="moji">タイトル</div>
-                                <input type="text" name="productName" value="" id="blog_title">
+                                <input type="text" name="blogTitle" th:value="${blog.blogTitle}" id="blogTitle">
                             </div>
                             <div class="blog_form_flex">
                                 <div class="moji">カテゴリー</div>
-                                <input type="text" name="productName" value="" id="category">
+                                <input type="text" name="categoryName" th:value="${blog.categoryName}" id="categoryName">
                             </div>
                             <div class="blog_form_flex">
                                 <div class="moji">画像</div>
-                                <input type="file" name="productImage">
+                                <input type="file" name="blogImage">
                             </div>
                             <div class="blog_form_flex">
                                 <div class="moji">本文</div>
-                                <textarea name="productDescription" placeholder="こちらに文章を書いてください"></textarea>
+                                <textarea name="article" placeholder="こちらに文章を書いてください" th:text="${blog.article}"></textarea>
                             </div>
 
                         </div>
                         <div class="register-section-details_flex">
+							<input type="hidden" name="blogId" th:value="${blog.blogId}">
                             <button class="register">更新</button>
                             <button class="back-btn" onclick="history.back();" type="button">戻る</button>
                         </div>
                     </form>
-                    <form th:action="@{/product/delete}" method="post">
+                    <form th:action="@{/blog/delete}" method="post">
                         <div class="register-section-details_flex">
-                            <input type="hidden" name="productId" value="">
+                            <input type="hidden" name="blogId" th:value="${blog.blogId}">
                             <button class="delete">削除</button>
                         </div>
                     </form>

@@ -27,7 +27,7 @@
         <nav>
             <ul>
                 <li class="current"><a href="#">Home</a></li>
-                <li><a href="#">新規記事追加</a></li>
+                <li><a th:href="@{/blog/register}">新規記事追加</a></li>
                 <li><a href="#">削除リスト</a></li>
                 <li><a th:href="@{/account/login}">ログアウト</a></li>
             </ul>
@@ -52,15 +52,15 @@
             </div>
             <section class="register-item">
                 <div class="all-view-register__button">
-                    <a href="" class="btn btn--orange btn--radius">新しい記事を書く</a>
+                    <a th:href="@{/blog/register}" class="btn btn--orange btn--radius">新しい記事を書く</a>
                 </div>
             </section>
             <ul class="products">
                 <li th:each="blog:${blogList}">
                     <a th:href="@{/blog/edit/{blogId}(blogId=${blog.blogId})}">
                         <img th:src="@{/blog-img/{imagePath}(imagePath=${blog.blogImage})}" alt="">
-                        <p th:text="{blog.blogTitle}"></p><br>
-                        <p th:text="{blog.categoryName}"></p>
+                        <p th:text="${blog.blogTitle}"></p><br>
+                        <p th:text="${blog.categoryName}"></p>
                     </a>
                 </li>
 
