@@ -92,20 +92,20 @@
                     <form th:action="@{/blog/register/process}" method="post" enctype="multipart/form-data">
                         <div class="blog_form">
                             <div class="blog_form_flex">
-                                <div class="moji">タイトル</div>
-                                <input type="text" name="blogTitle" value="" id="blogTitle">
-                            </div>
-                            <div class="blog_form_flex">
-                                <div class="moji">カテゴリー</div>
-                                <input type="text" name="categoryName" value="" id="categoryName">
-                            </div>
-                            <div class="blog_form_flex">
                                 <div class="moji">画像</div>
-                                <input type="file" name="blogImage">
+                                <input type="file" name="accountIcon">
                             </div>
                             <div class="blog_form_flex">
-                                <div class="moji">本文</div>
-                                <textarea name="article" placeholder="こちらに文章を書いてください"></textarea>
+                                <div class="moji">ユーザー名</div>
+                                <input type="text" name="accountName" value="" id="accountName">
+                            </div>
+                            <div class="blog_form_flex">
+                                <div class="moji">誕生日</div>
+                                <input type="date" name="birthday" value="" id="birthday">
+                            </div>
+                            <div class="blog_form_flex">
+                                <div class="moji">コメント</div>
+                                <textarea name="comment" placeholder="こちらにコメントを書いてください"></textarea>
                             </div>
 
                         </div>

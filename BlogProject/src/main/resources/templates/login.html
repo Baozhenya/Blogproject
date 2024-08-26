@@ -53,7 +53,6 @@
             <section class="form-contents">
 
                 <form class="login-form" method="post" th:action="@{/account/login/process}">
-
                     <div class="control-group" id="userEmail">
                         <label class="login-field-icon" for="accountEmail">UserEmail</label>
                         <input name="accountEmail" type="text" class="login-field" placeholder="UserEmail"
@@ -64,6 +63,7 @@
                         <input name="password" type="password" class="login-field" placeholder="password"
                             id="password">
                     </div>
+					<p style="color: red; text-align: center;" th:if="${error}">※メールアドレスかパスワードが間違っています！</p>
                     <div class="control-group control-position">
                         <button class="btn">ログイン</button>
                     </div>
